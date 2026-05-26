@@ -1,0 +1,27 @@
+include:
+  - remote: 'https://gitlab.com/codeant-pipelines/code-coverage-gitlab/-/raw/main/.gitlab-ci.yml'
+
+stages:
+  - test
+  - report
+
+test:
+  stage: test
+  image: maven:3.8-openjdk-17
+  script:
+    - mvn clean test jacoco:report
+  artifacts:
+    paths:
+      - target/site/jacoco/jacoco.xml
+
+codeant_coverage:
+  extends: .codeant_coverage_upload
+  stage: report
+  needs: [test]
+  variables:
+    COVERAGE_FILE: "target/site/jacoco/jacoco.xml"
+    ACCESS_TOKEN: "$CODEANT_ACCESS_TOKEN"     # Must be set in GitLab CI/CD settings
+    PLATFORM: "gitlab"                # Required
+    API_BASE: "https://api.codeant.ai"      # Optional but good to include
+    BASE_URL: "https://gitlab.com"          # Optional to specify GitLab base URL
+# Required
