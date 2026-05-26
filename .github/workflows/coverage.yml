@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches:
-      - master
+      - main
 
 permissions:
   contents: read
@@ -26,16 +26,13 @@ jobs:
       - name: Build + Test
         run: mvn clean verify
 
-      # Your existing JaCoCo report already generated here
+      # Generates:
+      # target/site/jacoco/jacoco.xml
 
       - name: Convert JaCoCo to Cobertura
-        run: |
-          pip install jacoco2cobertura
-          python -m jacoco2cobertura \
-            target/site/jacoco/jacoco.xml \
-            --output target/site/cobertura.xml
+        uses: haynes/jacoco2cobertura-action@v1.0
 
-      - name: Upload coverage to GitHub
+      - name: Upload coverage
         uses: actions/upload-code-coverage@v1
         with:
-          files: target/site/cobertura.xml
+          files: cobertura.xml
