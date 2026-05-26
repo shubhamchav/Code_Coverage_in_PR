@@ -40,3 +40,4 @@ jobs:
           file: target/site/cobertura.xml
           language: Java
           label: code-coverage/jacoco
+          fail-on-error: false
