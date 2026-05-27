@@ -1,0 +1,22 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+movie-service,com,DemoBuggy,29,0,0,0,11,0,2,0,2,0
+movie-service,com.movieapp.movie,MovieService,0,58,0,0,0,13,0,7,0,7
+movie-service,com.movieapp.movie,Movie,7,38,0,0,2,11,2,11,2,11
+movie-service,com.movieapp.movie,MovieController,42,0,0,0,11,0,6,0,6,0
+movie-service,com.movieapp.movie,MovieImageController,47,0,0,0,14,0,2,0,2,0
+movie-service,com.movieapp.auth,User,34,0,0,0,10,0,9,0,9,0
+movie-service,com.movieapp.auth,UserService,41,0,2,0,9,0,4,0,3,0
+movie-service,com.movieapp.auth,AuthController,19,0,0,0,3,0,2,0,2,0
+movie-service,com.movieapp.auth,JwtAuthenticationFilter,80,0,8,0,23,0,7,0,3,0
+movie-service,com.movieapp.auth,AppConfig,7,0,0,0,2,0,2,0,2,0
+movie-service,com.movieapp.auth,JwtUtil,34,0,0,0,12,0,3,0,3,0
+movie-service,com.movieapp.auth,UserController,25,0,0,0,4,0,3,0,3,0
+movie-service,com.movieapp.auth,SecurityConfig,21,0,0,0,7,0,2,0,2,0
+movie-service,com.movieapp.auth,UserController.UserInfoResponse,23,0,0,0,10,0,5,0,5,0
+movie-service,com.movieapp,WebConfig,8,0,0,0,2,0,2,0,2,0
+movie-service,com.movieapp,AnotherBuggySample,46,0,4,0,13,0,6,0,4,0
+movie-service,com.movieapp,WebConfig.new WebMvcConfigurer() {...},48,0,0,0,6,0,2,0,2,0
+movie-service,com.movieapp,HealthController,6,0,0,0,2,0,2,0,2,0
+movie-service,com.movieapp,LowCoverageSample,0,80,0,10,0,21,0,16,0,11
+movie-service,com.movieapp,DemoBuggy,10,0,0,0,2,0,2,0,2,0
+movie-service,com.movieapp,MovieServiceApplication,8,0,0,0,3,0,2,0,2,0

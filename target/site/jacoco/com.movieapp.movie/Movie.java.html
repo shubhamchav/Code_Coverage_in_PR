@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Movie.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">movie-service</a> &gt; <a href="index.source.html" class="el_package">com.movieapp.movie</a> &gt; <span class="el_source">Movie.java</span></div><h1>Movie.java</h1><pre class="source lang-java linenums">package com.movieapp.movie;
+
+import jakarta.persistence.*;
+
+@Entity
+@Table(name = &quot;movies&quot;)
+<span class="fc" id="L7">public class Movie {</span>
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
+
+    @Column(nullable = false)
+    private String title;
+
+
+    private String description;
+    private String director;
+    private int year;
+
+    // Only the image name is stored in DB
+    private String movieImage;
+
+    // Getters and setters
+<span class="nc" id="L24">    public String getMovieImage() { return movieImage; }</span>
+<span class="nc" id="L25">    public void setMovieImage(String movieImage) { this.movieImage = movieImage; }</span>
+<span class="fc" id="L26">    public Long getId() { return id; }</span>
+<span class="fc" id="L27">    public void setId(Long id) { this.id = id; }</span>
+<span class="fc" id="L28">    public String getTitle() { return title; }</span>
+<span class="fc" id="L29">    public void setTitle(String title) { this.title = title; }</span>
+<span class="fc" id="L30">    public String getDescription() { return description; }</span>
+<span class="fc" id="L31">    public void setDescription(String description) { this.description = description; }</span>
+<span class="fc" id="L32">    public String getDirector() { return director; }</span>
+<span class="fc" id="L33">    public void setDirector(String director) { this.director = director; }</span>
+<span class="fc" id="L34">    public int getYear() { return year; }</span>
+<span class="fc" id="L35">    public void setYear(int year) { this.year = year; }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.8.202204050719</span></div></body></html>

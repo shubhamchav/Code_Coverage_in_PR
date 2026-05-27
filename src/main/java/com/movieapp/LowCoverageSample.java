@@ -37,4 +37,21 @@ public class LowCoverageSample {
     public int abs(int a) {
         return a < 0 ? -a : a;
     }
+
+    public int gcd(int a, int b) {
+        a = abs(a);
+        b = abs(b);
+
+        if (a == 0 && b == 0) {
+            throw new IllegalArgumentException("GCD is undefined for 0 and 0");
+        }
+
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+
+        return a;
+    }
 }
